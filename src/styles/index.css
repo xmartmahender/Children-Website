@@ -1,0 +1,36 @@
+/* File: c:\Users\PMYLS\Desktop\Mahendar Website\Mahendar Website\Clone-childrens-website\childrens-clone\src\styles\index.css */
+
+/* Extend the dropdown menu area to prevent gaps */
+nav div.relative {
+  padding-bottom: 10px; /* Creates extra space below button */
+  margin-bottom: -10px; /* Offsets padding to maintain layout */
+}
+
+/* Add padding inside dropdown menu for easier mouse movement */
+nav div.relative > div.absolute {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+}
+
+/* Make dropdown items larger targets */
+nav div.relative > div.absolute a {
+  padding: 10px 16px;
+}
+
+/* Create a safe hover zone around dropdown */
+nav div.relative:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 25px; /* Increased from 20px */
+  z-index: 5;
+}
+
+/* Add a slight delay before dropdown disappears using CSS as well */
+nav div.relative:hover > div.absolute {
+  transition-delay: 0.2s; /* Small additional delay on hover */
+}
